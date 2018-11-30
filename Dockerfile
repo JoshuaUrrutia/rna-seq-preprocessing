@@ -22,6 +22,9 @@ RUN mkdir /opt/scripts
 ADD /src/runsortmerna /opt/scripts/runsortmerna.sh
 ADD /src/sortmerna-2.1b /opt/sortmerna-2.1b
 ADD /src/Trimmomatic-0.36 /opt/Trimmomatic-0.36
+ADD /src/FastQC /opt/FastQC
 
-CMD /opt/scripts/runsortmerna.sh
+RUN mkdir /corral-tacc
+RUN mkdir /corral-repl
 
+RUN apt-get install bc
